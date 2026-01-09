@@ -1,0 +1,522 @@
+/* ===== COMPLETE LOGIN MODAL OVERRIDE ===== */
+/* This CSS file completely overrides all framework styles for login modals */
+
+/* ===== MODAL CONTAINERS ===== */
+#id01, #id02 {
+    display: none !important;
+    position: fixed !important;
+    z-index: 1000 !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: auto !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    animation: fadeIn 0.3s ease !important;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* Show modal when display is set to block */
+#id01[style*="display: block"],
+#id02[style*="display: block"] {
+    display: block !important;
+}
+
+/* ===== MODAL CONTENT BOX ===== */
+#id01 form.modal-content,
+#id02 form.modal-content {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+    margin: auto !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 12px !important;
+    width: 90% !important;
+    max-width: 420px !important;
+    position: absolute !important;
+    top: 55% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2) !important;
+    animation: animatezoom 0.4s ease-out !important;
+}
+
+/* Make signup modal larger */
+#id02 form.modal-content {
+    max-width: 550px !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+}
+
+/* ===== HEADING ===== */
+#id01 .container,
+#id02 .container {
+    padding: 30px 25px !important;
+    width: 100% !important;
+}
+
+#id01 .container h3,
+#id02 .container h3 {
+    color: #2b2b2b !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    margin: 0 0 25px 0 !important;
+    text-align: center !important;
+    letter-spacing: -0.5px !important;
+}
+
+/* ===== IMAGE CONTAINER ===== */
+#id01 .imgcontainer,
+#id02 .imgcontainer {
+    text-align: center !important;
+    padding: 0 !important;
+    position: relative !important;
+}
+
+#id01 img.avatar,
+#id02 img.avatar {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 50% !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ===== CLOSE BUTTON ===== */
+#id01 .close,
+#id02 .close {
+    position: absolute !important;
+    right: 20px !important;
+    top: 15px !important;
+    color: #999 !important;
+    font-size: 32px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    transition: color 0.3s ease !important;
+    z-index: 1001 !important;
+    line-height: 1 !important;
+}
+
+#id01 .close:hover,
+#id02 .close:hover {
+    color: #f44336 !important;
+}
+
+/* ===== INPUT FIELDS ===== */
+#id01 input[type="text"],
+#id01 input[type="password"],
+#id01 input[type="email"],
+#id02 input[type="text"],
+#id02 input[type="password"],
+#id02 input[type="email"],
+#id01 .container input[type="text"],
+#id01 .container input[type="password"],
+#id01 .container input[type="email"],
+#id02 .container input[type="text"],
+#id02 .container input[type="password"],
+#id02 .container input[type="email"] {
+    width: 100% !important;
+    padding: 14px 16px !important;
+    margin: 10px 0 !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    font-size: 15px !important;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    background-color: #f8f9fa !important;
+    color: #333 !important;
+    transition: all 0.3s ease !important;
+    line-height: 1.5 !important;
+    box-sizing: border-box !important;
+}
+
+/* ===== LOGIN FORM SPECIFIC INPUTS ===== */
+#id01 input[type="text"],
+#id01 input[type="password"] {
+    width: 100% !important;
+    padding: 16px 18px !important;
+    margin: 12px 0 !important;
+    font-size: 16px !important;
+}
+
+/* ===== PASSWORD VISIBILITY TOGGLE ===== */
+.password-wrapper {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+.password-wrapper input[type="password"],
+.password-wrapper input[type="text"] {
+    width: 100% !important;
+    padding-right: 45px !important;
+}
+
+.toggle-password {
+    position: absolute !important;
+    right: 12px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    cursor: pointer !important;
+    font-size: 18px !important;
+    user-select: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.toggle-password:hover {
+    opacity: 0.7 !important;
+}
+
+#id01 input[type="text"]:focus,
+#id01 input[type="password"]:focus,
+#id01 input[type="email"]:focus,
+#id02 input[type="text"]:focus,
+#id02 input[type="password"]:focus,
+#id02 input[type="email"]:focus {
+    outline: none !important;
+    border-color: #667eea !important;
+    background-color: #fff !important;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15) !important;
+}
+
+#id01 input[type="text"]::placeholder,
+#id01 input[type="password"]::placeholder,
+#id01 input[type="email"]::placeholder,
+#id02 input[type="text"]::placeholder,
+#id02 input[type="password"]::placeholder,
+#id02 input[type="email"]::placeholder {
+    color: #999 !important;
+}
+
+/* ===== BUTTONS & SUBMIT ===== */
+#id01 input[type="submit"],
+#id02 input[type="submit"],
+#id01 button,
+#id02 button,
+#id01 .container input[type="submit"],
+#id02 .container input[type="submit"],
+#id01 .container button,
+#id02 .container button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    padding: 14px 40px !important;
+    margin: 20px auto 0 !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
+    display: inline-block !important;
+    width: auto !important;
+    line-height: 1.5 !important;
+}
+
+#id01 input[type="submit"]:hover,
+#id02 input[type="submit"]:hover,
+#id01 button:hover,
+#id02 button:hover,
+#id01 .container input[type="submit"]:hover,
+#id02 .container input[type="submit"]:hover,
+#id01 .container button:hover,
+#id02 .container button:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4) !important;
+}
+
+#id01 input[type="submit"]:active,
+#id02 input[type="submit"]:active,
+#id01 button:active,
+#id02 button:active,
+#id01 .container input[type="submit"]:active,
+#id02 .container input[type="submit"]:active,
+#id01 .container button:active,
+#id02 .container button:active {
+    transform: translateY(-1px) !important;
+}
+
+/* ===== RESET BUTTON STYLING ===== */
+#id02 input[type="reset"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    padding: 14px 40px !important;
+    margin: 8px 0 !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
+    display: inline-block !important;
+    width: auto !important;
+    line-height: 1.5 !important;
+    vertical-align: middle !important;
+    text-align: center !important;
+    height: auto !important;
+    min-height: 48px !important;
+    align-items: center !important;
+}
+
+#id02 input[type="reset"]:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4) !important;
+}
+
+#id02 input[type="reset"]:active {
+    transform: translateY(-1px) !important;
+}
+
+/* ===== SIGNUP BUTTON ROW - CENTER ALIGNMENT ===== */
+#id02 .row:has(input[type="submit"]) {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 15px !important;
+    flex-wrap: wrap !important;
+}
+
+#id02 .row:has(input[type="submit"]) > div {
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+#id02 input[type="submit"] {
+    width: auto !important;
+    display: inline-block !important;
+    height: auto !important;
+    min-height: 48px !important;
+}
+
+#id02 .row:has(input[type="submit"]) button {
+    width: auto !important;
+    display: inline-block !important;
+    height: auto !important;
+    min-height: 48px !important;
+    padding: 12px 24px !important;
+}
+
+/* ===== RADIO BUTTONS ===== */
+#id01 input[type="radio"],
+#id02 input[type="radio"] {
+    width: 18px !important;
+    height: 18px !important;
+    margin-right: 8px !important;
+    cursor: pointer !important;
+    accent-color: #667eea !important;
+}
+
+#id01 input[type="radio"] + label,
+#id02 input[type="radio"] + label {
+    cursor: pointer !important;
+    font-weight: 500 !important;
+    color: #333 !important;
+    font-size: 14px !important;
+    margin-left: 5px !important;
+}
+
+/* ===== TEXT ===== */
+#id01 p,
+#id02 p {
+    color: #555 !important;
+    margin: 15px 0 10px 0 !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+}
+
+/* ===== CATEGORY SECTION - INLINE (SIGNUP ONLY) ===== */
+#id02 .row:has(p) {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+}
+
+#id02 .row:has(p) > div {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#id02 p {
+    display: inline-block !important;
+    margin-right: 20px !important;
+}
+
+/* ===== FORM LAYOUT FIX ===== */
+#id02 .container {
+    max-height: 85vh !important;
+    overflow-y: auto !important;
+}
+
+#id02 section {
+    width: 100% !important;
+}
+
+#id02 .row {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+#id02 .row > div {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+}
+
+#id02 .3u,
+#id02 .6u,
+#id02 .7u,
+#id02 .12u$ {
+    width: 100% !important;
+}
+
+/* Make all signup inputs full width */
+#id02 input[type="text"],
+#id02 input[type="password"],
+#id02 input[type="email"],
+#id02 input[type="submit"],
+#id02 input[type="reset"] {
+    width: 100% !important;
+    margin: 8px 0 !important;
+    padding: 12px 14px !important;
+}
+
+/* Fix center alignment in signup */
+#id02 center {
+    text-align: left !important;
+    display: block !important;
+}
+
+/* Signup form paragraph styling */
+#id02 .container p {
+    text-align: left !important;
+    margin: 15px 0 8px 0 !important;
+}
+
+#id01 form,
+#id02 form {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#id01 .row,
+#id02 .row {
+    margin-bottom: 10px !important;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 600px) {
+    #id01 form.modal-content,
+    #id02 form.modal-content {
+        width: 95% !important;
+        max-width: 100% !important;
+    }
+
+    #id01 .container,
+    #id02 .container {
+        padding: 25px 20px !important;
+    }
+
+    #id01 .container h3,
+    #id02 .container h3 {
+        font-size: 24px !important;
+    }
+
+    #id01 input[type="submit"],
+    #id02 input[type="submit"] {
+        width: 100% !important;
+        padding: 12px 20px !important;
+    }
+}
+
+/* ===== BOOTSTRAP & FRAMEWORK OVERRIDES ===== */
+/* Override Bootstrap button styles for login modal buttons */
+#id01 input[type="submit"],
+#id02 input[type="submit"],
+#id01 input[type="submit"].btn,
+#id02 input[type="submit"].btn,
+#id01 input[type="submit"].special,
+#id02 input[type="submit"].special {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: none !important;
+    color: white !important;
+    padding: 14px 40px !important;
+    margin: 20px auto !important;
+    border-radius: 8px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    width: auto !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
+    text-decoration: none !important;
+    pointer-events: auto !important;
+    z-index: 1001 !important;
+}
+
+#id01 input[type="submit"]:hover,
+#id02 input[type="submit"]:hover,
+#id01 input[type="submit"].btn:hover,
+#id02 input[type="submit"].btn:hover,
+#id01 input[type="submit"].special:hover,
+#id02 input[type="submit"].special:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4) !important;
+}
+
+/* Override input styling for login/signup forms */
+#id01 input[type="text"],
+#id01 input[type="password"],
+#id01 input[type="email"],
+#id01 input[type="tel"],
+#id02 input[type="text"],
+#id02 input[type="password"],
+#id02 input[type="email"],
+#id02 input[type="tel"] {
+    background-color: #f8f9fa !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    color: #333 !important;
+    padding: 14px 16px !important;
+    font-size: 15px !important;
+}
+
+#id01 input[type="text"]:focus,
+#id01 input[type="password"]:focus,
+#id01 input[type="email"]:focus,
+#id01 input[type="tel"]:focus,
+#id02 input[type="text"]:focus,
+#id02 input[type="password"]:focus,
+#id02 input[type="email"]:focus,
+#id02 input[type="tel"]:focus {
+    border-color: #667eea !important;
+    background-color: #fff !important;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15) !important;
+    outline: none !important;
+}
